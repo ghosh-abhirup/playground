@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  img {
+    @apply absolute size-full object-cover;
+  }
+  .img {
+    @apply absolute size-full top-0 left-0 overflow-hidden;
+  }
+
+  section {
+    @apply relative w-[100vw] h-[100vh] overflow-hidden;
+  }
+}
