@@ -44,7 +44,7 @@ const SplitVignette = () => {
   };
 
   return (
-    <section className="w-[100dvw] h-[100dvh] relative overflow-x-hidden" onMouseMove={mouseEvent}>
+    <section className="w-full h-[100dvh] relative " onMouseMove={mouseEvent}>
       {gallery?.map((item, index) => (
         <Gallery bg={item.bg} mousePosition={mousePos} key={index} vignette={item.vignette} />
       ))}

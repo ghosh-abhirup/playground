@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
 import { Oswald } from "next/font/google";
+import SmoothScroller from "./SmoothScroller";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -18,7 +19,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${oswald.variable} antialiased`}>{children}</body>
+      <body className={`${oswald.variable} antialiased`}>
+        <SmoothScroller>{children}</SmoothScroller>
+      </body>
     </html>
   );
 }
