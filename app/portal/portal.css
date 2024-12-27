@@ -1,0 +1,8 @@
+.upperText {
+  @apply text-[8rem] font-extrabold uppercase tracking-tight block;
+  transform: rotateX(-30deg);
+}
+.lowerText {
+  @apply text-[8rem] font-extrabold uppercase tracking-tight block;
+  transform: rotateX(30deg);
+}

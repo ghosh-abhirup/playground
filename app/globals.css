@@ -1,6 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Funnel+Display:wght@300..800&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --font-funnel_display: "Funnel Display", serif;
+  --font-royal: "Bonheur Royale", serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
   width: 100%;
