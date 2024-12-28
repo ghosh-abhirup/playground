@@ -1,6 +1,6 @@
 import localFont from "next/font/local";
 import "./globals.css";
-import { Oswald } from "next/font/google";
+import { Oswald, Cinzel_Decorative, Montserrat } from "next/font/google";
 import SmoothScroller from "./SmoothScroller";
 
 const geistSans = localFont({
@@ -10,6 +10,8 @@ const geistSans = localFont({
 });
 
 const oswald = Oswald({ subsets: ["latin"], weight: ["200", "300", "400", "500", "700", "600"], variable: "--font-oswald" });
+const montserrat = Montserrat({ subsets: ["latin"], weight: ["200", "300", "400", "500", "700", "600"], variable: "--font-montserrat" });
+const cinzel = Cinzel_Decorative({ subsets: ["latin"], weight: ["400", "700", "900"], variable: "--font-cinzel" });
 
 export const metadata = {
   title: "Create Next App",
@@ -19,7 +21,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${oswald.variable} antialiased`}>
+      <body className={`${oswald.variable} ${cinzel.variable} ${montserrat.variable} antialiased`}>
         <SmoothScroller>{children}</SmoothScroller>
       </body>
     </html>

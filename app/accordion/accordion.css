@@ -1,0 +1,3 @@
+.sect {
+  @apply w-full h-screen overflow-hidden;
+}

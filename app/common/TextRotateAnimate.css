@@ -1,0 +1,4 @@
+.animated-text-split {
+  @apply font-semibold text-[14rem] leading-[1] tracking-tight font-montserrat uppercase;
+  will-change: top;
+}
