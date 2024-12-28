@@ -3,11 +3,12 @@
 }
 
 .row {
-  @apply relative w-full flex justify-center gap-1 md:gap-4 p-2 md:p-4;
+  @apply relative w-full flex flex-col items-center md:flex-row justify-center gap-1 md:gap-4 p-2 md:p-4;
 }
 
 .card {
-  @apply relative w-1/2 md:w-2/5 rounded-xl overflow-hidden h-[240px] md:h-[360px];
+  @apply relative w-full md:w-2/5 rounded-xl overflow-hidden h-[180px] md:h-[360px];
+  will-change: transform;
 }
 
 .card_img {
@@ -17,6 +18,7 @@
 .content {
   @apply flex flex-col gap-4 items-center justify-center absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 -z-10;
 }
+
 .logo {
   @apply p-8 rounded-full bg-transparent border-2 border-solid border-white text-2xl font-royale mb-6;
 }

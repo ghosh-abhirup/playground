@@ -15,27 +15,56 @@ const DribbleEffect = () => {
     const leftRotationValues = [-30, -20, -35];
     const rightRotationValues = [30, 20, 35];
     const yValues = [100, -150, -400];
-    console.log("rendering");
-    gsap.utils.toArray(".row").forEach((row, index) => {
-      const cardLeft = row.querySelector(".card-left");
-      const cardRight = row.querySelector(".card-right");
 
-      gsap.to(cardLeft, {
-        x: leftXValues[index],
+    const leftSlide = -800;
+    const rightSlide = 800;
+    ScrollTrigger.matchMedia({
+      "(max-width: 750px)": () => {
+        gsap.utils.toArray(".row").forEach((row, index) => {
+          const cardLeft = row.querySelector(".card-left");
+          const cardRight = row.querySelector(".card-right");
 
-        scrollTrigger: {
-          trigger: ".main",
-          start: "top center",
-          end: "150% bottom",
-          scrub: true,
-          onUpdate: (self) => {
-            const progress = self.progress;
+          gsap.to(cardLeft, {
+            x: leftXValues[index],
 
-            cardLeft.style.transform = `translateX(${progress * leftXValues[index]}px) translateY(${progress * yValues[index]}px) rotate(${progress * leftRotationValues[index]}deg)`;
-            cardRight.style.transform = `translateX(${progress * rightXValues[index]}px) translateY(${progress * yValues[index]}px) rotate(${progress * rightRotationValues[index]}deg)`;
-          },
-        },
-      });
+            scrollTrigger: {
+              trigger: ".main",
+              start: "top center",
+              end: "150% bottom",
+              scrub: true,
+              onUpdate: (self) => {
+                const progress = self.progress;
+
+                cardLeft.style.transform = `translateX(${progress * leftSlide}px)`;
+                cardRight.style.transform = `translateX(${progress * rightSlide}px)`;
+              },
+            },
+          });
+        });
+      },
+      "(min-width: 750px)": () => {
+        gsap.utils.toArray(".row").forEach((row, index) => {
+          const cardLeft = row.querySelector(".card-left");
+          const cardRight = row.querySelector(".card-right");
+
+          gsap.to(cardLeft, {
+            x: leftXValues[index],
+
+            scrollTrigger: {
+              trigger: ".main",
+              start: "top center",
+              end: "150% bottom",
+              scrub: true,
+              onUpdate: (self) => {
+                const progress = self.progress;
+
+                cardLeft.style.transform = `translateX(${progress * leftXValues[index]}px) translateY(${progress * yValues[index]}px) rotate(${progress * leftRotationValues[index]}deg)`;
+                cardRight.style.transform = `translateX(${progress * rightXValues[index]}px) translateY(${progress * yValues[index]}px) rotate(${progress * rightRotationValues[index]}deg)`;
+              },
+            },
+          });
+        });
+      },
     });
 
     return () => {
@@ -46,8 +75,8 @@ const DribbleEffect = () => {
   return (
     <div>
       <div className="w-full h-screen flex flex-col gap-4 items-center justify-center">
-        <p className="text-lg md:text-[6rem] font-bold  font-royale">Dribble Effect</p>
-        <p className="font-semibold text-lg font-funnel mt-3 md:mt-5">
+        <p className="text-[2rem] md:text-[6rem] font-bold  font-royale">Dribble Effect</p>
+        <p className="font-semibold text-base md:text-lg font-funnel mt-3 md:mt-5">
           Animation inspired from,{" "}
           <Link href={"https://trionn.com/"} className="underline">
             Trionn
