@@ -45,10 +45,10 @@ const TextRotateUpAnimate = ({ text }) => {
   }, []);
 
   return (
-    <div className="relative w-[50vw] h-[220px] wrapper overflow-hidden">
-      <p className="animated-text-split top_text_up left-0 top-[200px] absolute">{text}</p>
-      <p className="animated-text-split middle_text_up left-0 top-[400px] absolute">{text}</p>
-      <p className="animated-text-split bottom_text_up left-0 top-[500px] absolute">{text}</p>
+    <div className="relative w-[50vw] h-[220px] wrapper overflow-hidden ">
+      <p className="animated-text-split top_text_up right-2 top-[200px] absolute">{text}</p>
+      <p className="animated-text-split middle_text_up right-2 top-[400px] absolute">{text}</p>
+      <p className="animated-text-split bottom_text_up right-2 top-[500px] absolute">{text}</p>
     </div>
   );
 };

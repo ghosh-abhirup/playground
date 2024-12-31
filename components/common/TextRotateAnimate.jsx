@@ -45,7 +45,7 @@ const TextRotateAnimate = ({ text }) => {
   }, []);
 
   return (
-    <div className="relative h-[220px] wrapper overflow-hidden">
+    <div className="relative w-[100vw] h-[220px] wrapper overflow-hidden">
       <p className="animated-text-split top_text  left-0 -top-[500px] absolute">{text}</p>
       <p className="animated-text-split middle_text left-0 -top-[400px]  absolute">{text}</p>
       <p className="animated-text-split bottom_text left-0 -top-[200px]  absolute">{text}</p>
