@@ -1,7 +1,8 @@
 "use client";
-import { useState } from "react";
+
 import Gallery from "./Gallery";
-import { useMotionValue, useSpring } from "motion/react";
+import { useSpring } from "motion/react";
+import SmoothScroller from "../SmoothScroller";
 
 const gallery = [
   {
@@ -44,11 +45,13 @@ const SplitVignette = () => {
   };
 
   return (
-    <section className="w-full h-[100dvh] relative " onMouseMove={mouseEvent}>
-      {gallery?.map((item, index) => (
-        <Gallery bg={item.bg} mousePosition={mousePos} key={index} vignette={item.vignette} />
-      ))}
-    </section>
+    <SmoothScroller>
+      <section className="w-full h-[100dvh] relative " onMouseMove={mouseEvent}>
+        {gallery?.map((item, index) => (
+          <Gallery bg={item.bg} mousePosition={mousePos} key={index} vignette={item.vignette} />
+        ))}
+      </section>
+    </SmoothScroller>
   );
 };
 

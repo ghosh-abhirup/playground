@@ -5,6 +5,7 @@ import "./dribble.css";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect } from "react";
+import SmoothScroller from "../SmoothScroller";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -73,47 +74,49 @@ const DribbleEffect = () => {
   }, []);
 
   return (
-    <div>
-      <div className="w-full h-screen flex flex-col gap-4 items-center justify-center">
-        <p className="text-[2rem] md:text-[6rem] font-bold  font-royale">Dribble Effect</p>
-        <p className="font-semibold text-base md:text-lg font-funnel mt-3 md:mt-5">
-          Animation inspired from,{" "}
-          <Link href={"https://trionn.com/"} className="underline">
-            Trionn
-          </Link>
-        </p>
-      </div>
-
-      <div className="main">
-        <div className="content">
-          <div className="logo">logo</div>
-          <p className="text_middle">Dribble animation</p>
-          <p className="text_middle">on the pics</p>
-          <p className="text_middle">presented on card</p>
+    <SmoothScroller>
+      <div>
+        <div className="w-full h-screen flex flex-col gap-4 items-center justify-center">
+          <p className="text-[2rem] md:text-[6rem] font-bold  font-royale">Dribble Effect</p>
+          <p className="font-semibold text-base md:text-lg font-funnel mt-3 md:mt-5">
+            Animation inspired from,{" "}
+            <Link href={"https://trionn.com/"} className="underline">
+              Trionn
+            </Link>
+          </p>
         </div>
 
-        {[1, 2, 3]?.map((i) => (
-          <div className="row" key={i}>
-            <div
-              className="card card-left"
-              style={{
-                transform: `translateX(0px) translateY(0px) rotate(0deg)`,
-              }}
-            >
-              <img src={`/images/cards/img-${2 * i - 1}.jpg`} alt="card_img" className="card_img" />
-            </div>
-            <div
-              className="card card-right"
-              style={{
-                transform: `translateX(0px) translateY(0px) rotate(0deg)`,
-              }}
-            >
-              <img src={`/images/cards/img-${2 * i}.jpg`} alt="card_img" className="card_img" />
-            </div>
+        <div className="main">
+          <div className="content">
+            <div className="logo">logo</div>
+            <p className="text_middle">Dribble animation</p>
+            <p className="text_middle">on the pics</p>
+            <p className="text_middle">presented on card</p>
           </div>
-        ))}
+
+          {[1, 2, 3]?.map((i) => (
+            <div className="row" key={i}>
+              <div
+                className="card card-left"
+                style={{
+                  transform: `translateX(0px) translateY(0px) rotate(0deg)`,
+                }}
+              >
+                <img src={`/images/cards/img-${2 * i - 1}.jpg`} alt="card_img" className="card_img" />
+              </div>
+              <div
+                className="card card-right"
+                style={{
+                  transform: `translateX(0px) translateY(0px) rotate(0deg)`,
+                }}
+              >
+                <img src={`/images/cards/img-${2 * i}.jpg`} alt="card_img" className="card_img" />
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </SmoothScroller>
   );
 };
 

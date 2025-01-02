@@ -14,10 +14,12 @@
 }
 
 .marquee {
-  @apply flex items-center min-w-[150vw] gap-4 will-change-auto;
+  @apply flex items-center min-w-[150vw] gap-4;
+  will-change: transform;
 }
 
-.pinned {
+.navbar_text {
+  @apply font-semibold leading-3 uppercase text-white tracking-wide text-xs;
 }
 
 .revealer {
@@ -33,5 +35,10 @@
 }
 
 .web-content {
-  @apply bg-white text-black w-full h-[150vh] relative z-[80] opacity-0 will-change-auto;
+  @apply bg-white text-black w-full min-h-screen relative z-[80] opacity-0 will-change-auto;
+}
+
+.long-text {
+  @apply font-semibold text-[18rem] leading-[0.8] tracking-tight font-montserrat uppercase;
+  will-change: top;
 }

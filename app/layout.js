@@ -1,13 +1,6 @@
 import localFont from "next/font/local";
 import "./globals.css";
 import { Oswald, Cinzel_Decorative, Montserrat } from "next/font/google";
-import SmoothScroller from "./SmoothScroller";
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
 
 const oswald = Oswald({ subsets: ["latin"], weight: ["200", "300", "400", "500", "700", "600"], variable: "--font-oswald" });
 const montserrat = Montserrat({ subsets: ["latin"], weight: ["200", "300", "400", "500", "700", "600"], variable: "--font-montserrat" });
@@ -21,9 +14,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${oswald.variable} ${cinzel.variable} ${montserrat.variable} antialiased`}>
-        <SmoothScroller>{children}</SmoothScroller>
-      </body>
+      <body className={`${oswald.variable} ${cinzel.variable} ${montserrat.variable} antialiased`}>{children}</body>
     </html>
   );
 }
