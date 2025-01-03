@@ -76,9 +76,9 @@ const DribbleEffect = () => {
   return (
     <SmoothScroller>
       <div>
-        <div className="w-full h-screen flex flex-col gap-4 items-center justify-center">
-          <p className="text-[2rem] md:text-[6rem] font-bold  font-royale">Dribble Effect</p>
-          <p className="font-semibold text-base md:text-lg font-funnel mt-3 md:mt-5">
+        <div className="w-full h-screen flex flex-col items-center justify-center">
+          <p className="text-[2rem] md:text-[6rem] font-greenos">Dribble Effect</p>
+          <p className="font-semibold text-base md:text-lg font-funnel mt-3">
             Animation inspired from,{" "}
             <Link href={"https://trionn.com/"} className="underline">
               Trionn

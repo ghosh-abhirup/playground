@@ -20,7 +20,7 @@
 }
 
 .logo {
-  @apply p-8 rounded-full bg-transparent border-2 border-solid border-white text-2xl font-royale mb-6;
+  @apply p-8 rounded-full bg-transparent border-2 border-solid border-white text-2xl font-greenos mb-6;
 }
 
 .main {

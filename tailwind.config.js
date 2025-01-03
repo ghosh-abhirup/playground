@@ -4,10 +4,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        oswald: ["var(--font-oswald)", "sans-serif"],
-        funnel: ["var(--font-funnel_display)", "sans-serif"],
-        royale: ["var(--font-royal)", "sans-serif"],
-        cinzel: ["var(--font-cinzel)", "sans-serif"],
+        greenos: ["var(--font-greenos)", "sans-serif"],
+        anton: ["var(--font-anton)", "sans-serif"],
         montserrat: ["var(--font-montserrat)", "sans-serif"],
       },
     },

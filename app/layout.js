@@ -1,10 +1,14 @@
 import localFont from "next/font/local";
 import "./globals.css";
-import { Oswald, Cinzel_Decorative, Montserrat } from "next/font/google";
+import { Montserrat, Anton } from "next/font/google";
 
-const oswald = Oswald({ subsets: ["latin"], weight: ["200", "300", "400", "500", "700", "600"], variable: "--font-oswald" });
-const montserrat = Montserrat({ subsets: ["latin"], weight: ["200", "300", "400", "500", "700", "600"], variable: "--font-montserrat" });
-const cinzel = Cinzel_Decorative({ subsets: ["latin"], weight: ["400", "700", "900"], variable: "--font-cinzel" });
+const greenos = localFont({
+  src: "./fonts/Greenos.ttf",
+  variable: "--font-greenos",
+  weight: "400 500 600 700 800 900",
+});
+const montserrat = Montserrat({ subsets: ["latin"], weight: ["200", "300", "400", "500", "700", "600", "800"], variable: "--font-montserrat" });
+const anton = Anton({ subsets: ["latin"], weight: ["400"], variable: "--font-anton" });
 
 export const metadata = {
   title: "Create Next App",
@@ -14,7 +18,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${oswald.variable} ${cinzel.variable} ${montserrat.variable} antialiased`}>{children}</body>
+      <body className={`${greenos.variable} ${montserrat.variable} ${anton.variable} antialiased`}>{children}</body>
     </html>
   );
 }

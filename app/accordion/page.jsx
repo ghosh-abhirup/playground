@@ -124,7 +124,7 @@ const Accordion = () => {
           <div className="flex flex-col items-center justify-between  size-full">
             <p></p>
             <div>
-              <p className="font-cinzel text-[4rem]">Accordion</p>
+              <p className=" text-[6rem] leading-[0.8] font-greenos">Accordion</p>
               <div className="flex items-center justify-center mt-5">
                 <p className="navbar_text">Only for window screen</p>
               </div>
