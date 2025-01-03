@@ -18,7 +18,6 @@ const RouteComponent = ({ routes }) => {
       onUpdate: ({ progress }) => {
         if (routes?.length > 10) {
           const change = 20 + 60 * progress;
-          console.log("change = ", change);
           document.documentElement.style.setProperty("--route_container_perspective", `${change}%`);
         }
       },

@@ -1,5 +1,5 @@
 .text_middle {
-  @apply text-xs md:text-2xl font-funnel leading-3 md:font-semibold;
+  @apply text-xs md:text-2xl leading-3 md:font-semibold;
 }
 
 .row {

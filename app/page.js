@@ -24,6 +24,50 @@ const routes = [
     link: "/",
     type: "clone",
   },
+  {
+    name: "Parallax",
+    link: "/parallax",
+  },
+  {
+    name: "Split Vignette",
+    link: "/split-vignette",
+  },
+  {
+    name: "Dribble Anim",
+    link: "/dribbleEffect",
+  },
+  {
+    name: "Accordion AU",
+    link: "/accordion",
+    type: "clone",
+  },
+  {
+    name: "Zentry",
+    link: "/",
+    type: "clone",
+  },
+  {
+    name: "Parallax",
+    link: "/parallax",
+  },
+  {
+    name: "Split Vignette",
+    link: "/split-vignette",
+  },
+  {
+    name: "Dribble Anim",
+    link: "/dribbleEffect",
+  },
+  {
+    name: "Accordion AU",
+    link: "/accordion",
+    type: "clone",
+  },
+  {
+    name: "Zentry",
+    link: "/",
+    type: "clone",
+  },
 ];
 
 export default function Home() {

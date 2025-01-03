@@ -8,6 +8,10 @@ module.exports = {
         anton: ["var(--font-anton)", "sans-serif"],
         montserrat: ["var(--font-montserrat)", "sans-serif"],
       },
+      colors: {
+        secondary_text: "#c0c0c0",
+        route_hover: "#ffef9f",
+      },
     },
   },
   plugins: [],
