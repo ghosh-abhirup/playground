@@ -1,5 +1,5 @@
 "use client";
-
+import "./wallscroll.css";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Link from "next/link";

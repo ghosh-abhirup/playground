@@ -18,32 +18,3 @@ body {
   background-color: black;
   color: white;
 }
-
-/* md:pt-[5rem] pr-5 md:pr-[100px] */
-.routeContainer {
-  @apply w-[95%] flex flex-col items-end gap-5 md:gap-8;
-  perspective: 800px;
-  transform-style: preserve-3d;
-  perspective-origin: right var(--route_container_perspective);
-}
-
-.scroll_route_text {
-  @apply text-[2.5rem] md:text-[4rem] leading-[1] lg:text-[4.5rem] xl:text-[7rem] font-anton uppercase text-right cursor-pointer text-secondary_text hover:text-route_hover;
-  transform: rotateY(-15deg) translateZ(0);
-  transform-style: preserve-3d;
-  transform-origin: right;
-  transition-duration: 0.3s;
-}
-
-.scroll_route_text:hover {
-  transform: translateZ(20px) rotateY(-15deg);
-  /* transform: rotateY(-10deg); */
-}
-
-.route_tag {
-  @apply absolute bottom-0 -left-16 text-[14px] md:text-xs rounded-lg bg-white text-black font-semibold font-mono py-1 px-2 uppercase;
-}
-
-.titleCard_container {
-  @apply z-10 relative md:fixed md:left-0 md:bottom-0 h-fit flex flex-col px-4 py-8;
-}

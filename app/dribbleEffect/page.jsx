@@ -1,11 +1,10 @@
 "use client";
-
-import Link from "next/link";
 import "./dribble.css";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect } from "react";
 import SmoothScroller from "../SmoothScroller";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -78,9 +77,9 @@ const DribbleEffect = () => {
       <div>
         <div className="w-full h-screen flex flex-col items-center justify-center">
           <p className="text-[2rem] md:text-[6rem] font-greenos">Dribble Effect</p>
-          <p className="font-semibold text-base md:text-lg font-funnel mt-3">
+          <p className="font-semibold text-base md:text-lg mt-3">
             Animation inspired from,{" "}
-            <Link href={"https://trionn.com/"} className="underline">
+            <Link href={"https://trionn.com/"} target="_blank" className="underline">
               Trionn
             </Link>
           </p>
