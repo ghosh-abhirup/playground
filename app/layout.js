@@ -7,6 +7,12 @@ const greenos = localFont({
   variable: "--font-greenos",
   weight: "400 500 600 700 800 900",
 });
+const moderniz = localFont({
+  src: "./fonts/Moderniz.otf",
+  variable: "--font-moderniz",
+  weight: "400 500 600 700 800 900",
+});
+
 const montserrat = Montserrat({ subsets: ["latin"], weight: ["200", "300", "400", "500", "700", "600", "800"], variable: "--font-montserrat" });
 const anton = Anton({ subsets: ["latin"], weight: ["400"], variable: "--font-anton" });
 
@@ -18,7 +24,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${greenos.variable} ${montserrat.variable} ${anton.variable} antialiased`}>{children}</body>
+      <body className={`${greenos.variable} ${moderniz.variable} ${montserrat.variable} ${anton.variable} antialiased`}>{children}</body>
     </html>
   );
 }

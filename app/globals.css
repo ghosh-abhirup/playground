@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --route_container_perspective: 20%;
+  --route_container_perspective: 'right';
 }
 
 * {

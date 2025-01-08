@@ -9,7 +9,12 @@ gsap.registerPlugin(ScrollTrigger);
 
 const RouteComponent = ({ routes }) => {
   useEffect(() => {
-    document.documentElement.style.setProperty("--route_container_perspective", "20%");
+    if (routes?.length > 10) {
+      document.documentElement.style.setProperty("--route_container_perspective", "right 20%");
+    } else {
+      document.documentElement.style.setProperty("--route_container_perspective", "right center");
+    }
+
     ScrollTrigger.create({
       trigger: ".routeParent",
       start: "top top",
@@ -18,7 +23,7 @@ const RouteComponent = ({ routes }) => {
       onUpdate: ({ progress }) => {
         if (routes?.length > 10) {
           const change = 20 + 60 * progress;
-          document.documentElement.style.setProperty("--route_container_perspective", `${change}%`);
+          document.documentElement.style.setProperty("--route_container_perspective", `right ${change}%`);
         }
       },
     });
