@@ -2,15 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
-  img {
-    @apply absolute size-full object-cover;
-  }
-  .img {
-    @apply absolute size-full top-0 left-0 overflow-hidden;
-  }
+.item {
+  @apply absolute top-0 left-0 right-0 bottom-0;
+  clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%);
+}
 
-  section {
-    @apply relative w-[100vw] h-[100vh] overflow-hidden;
-  }
+.page_img {
+  @apply w-[80px] h-[40px] overflow-hidden;
+}
+
+.carousel_active {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.descBox {
+  @apply fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-xs md:text-2xl font-light font-montserrat z-50 w-[50vw]  md:w-[30vw] h-12;
+
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }

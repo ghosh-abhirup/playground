@@ -1,51 +1,133 @@
-import SmoothScroller from "../SmoothScroller";
+"use client";
+import { useEffect, useState } from "react";
 import "./parallax.css";
-import ParallaxImg from "./ParallaxImg";
+import { gsap } from "gsap";
+import Image from "next/image";
+
+const imgArr = [1, 2, 3, 4, 5, 6];
+const titles = ["Regeneration Suites", "Simplicity & Tactility", "Reimagining Loyalty", "Beyond Canvas", "Sound Expressed In Full", "Reinventing Wonder"];
 
 const Parallax = () => {
+  const [selectedIndex, setSelectedIndex] = useState(1);
+
+  useEffect(() => {
+    gsap.to(".titleBox", {
+      y: `${-48 * (selectedIndex - 1)}px`,
+      ease: "power1.inOut",
+      duration: 0.6,
+    });
+  }, [selectedIndex]);
+
+  const right = () => {
+    if (selectedIndex <= imgArr?.length - 1) {
+      setSelectedIndex((prev) => prev + 1);
+
+      gsap.fromTo(
+        "#right_plus",
+        { rotate: 0 },
+        {
+          duration: 0.6,
+          ease: "power2.inOut",
+          rotate: 90,
+        }
+      );
+
+      gsap.to(`#item_${selectedIndex + 1}`, {
+        duration: 1.2,
+        ease: "power4.inOut",
+        "clip-path": "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+      });
+    }
+  };
+  const left = () => {
+    if (selectedIndex > 1) {
+      setSelectedIndex((prev) => prev - 1);
+
+      gsap.fromTo(
+        "#left_plus",
+        { rotate: 0 },
+        {
+          duration: 0.6,
+          ease: "power2.inOut",
+          rotate: -90,
+        }
+      );
+
+      gsap.to(`#item_${selectedIndex}`, {
+        "clip-path": "polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)",
+        ease: "power4.inOut",
+        duration: 1.2,
+      });
+    }
+  };
+
+  const numHoverIn = (index) => {
+    gsap.fromTo(
+      `#num_${index + 1}`,
+      { y: "1rem" },
+      {
+        y: "0rem",
+      }
+    );
+  };
+  const numHoverOut = (index) => {
+    const numElement = document.getElementById(`num_${index + 1}`);
+
+    gsap.fromTo(
+      numElement,
+      { y: "0rem" },
+      {
+        y: "-1rem",
+      }
+    );
+  };
+
   return (
-    <SmoothScroller>
-      <div className="overflow-hidden">
-        <section className="hero">
-          <div className="img">
-            <ParallaxImg src="/images/hills.jpg" alt="hero" />
-          </div>
+    <div className="w-full h-screen overflow-hidden relative font-montserrat">
+      {imgArr?.map((num, index) => (
+        <div className={`item z-10 ${index == 0 ? "carousel_active" : ""}`} id={`item_${index + 1}`} key={index}>
+          <img src={`/images/cards/img-${num}.jpg`} alt="bg" className="size-full brightness-50 object-cover " />
+        </div>
+      ))}
 
-          <div className="relative z-10 text-black p-10">
-            <p className=" text-[8rem] font-bold uppercase">Parallax</p>
-            <p className="text-lg leading-5 max-w-[40%]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit minus temporibus id dolores odio non consequatur omnis facere veniam explicabo!</p>
-          </div>
-        </section>
-        <section className="project">
-          <div className="img">
-            <ParallaxImg src="/images/rainy.jpg" alt="project" />
-          </div>
-          <div className="w-full flex flex-col items-end relative z-10  p-10">
-            <p className=" text-[8rem] font-bold uppercase">Hills</p>
-            <p className="text-lg leading-5 max-w-[40%]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit minus temporibus id dolores odio non consequatur omnis facere veniam explicabo!</p>
-          </div>
-        </section>
-        <section className="about">
-          <div className="img">
-            <ParallaxImg src="/images/flowers.jpg" alt="about" />
-          </div>
-          <div className="size-full flex items-center justify-center relative z-10 gap-10 p-10">
-            <p className=" text-[8rem] font-bold uppercase">Hero</p>
-            <p className="text-lg leading-5 max-w-[40%]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit minus temporibus id dolores odio non consequatur omnis facere veniam explicabo!</p>
-          </div>
-        </section>
-        <section className="banner">
-          <div className="img">
-            <ParallaxImg src="/images/globe.jpg" alt="banner" />
-          </div>
-
-          <div className="size-full flex flex-col items-center justify-center relative z-10 gap-2 p-10">
-            <p className=" text-[8rem] font-bold uppercase">About</p>
-            <p className="text-lg leading-5 max-w-[40%] text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit minus temporibus id dolores odio non consequatur omnis facere veniam explicabo!</p>
-          </div>
-        </section>
+      <div className="size-full absolute flex items-center z-20 text-white gap-10 md:gap-[20vw]">
+        <div className="size-full flex items-center justify-center text-[2rem] mr-10 md:mr-0 md:text-[3rem] font-thin" id="left_plus" onClick={left}>
+          +
+        </div>
+        <div className="size-full flex items-center justify-center text-[2rem] ml-10 md:ml-0 md:text-[3rem] font-thin" id="right_plus" onClick={right}>
+          +
+        </div>
       </div>
-    </SmoothScroller>
+
+      <div className="descBox">
+        {titles?.map((title, index) => (
+          <div className="size-full flex items-center justify-center relative titleBox" key={index}>
+            <p onMouseEnter={() => numHoverIn(index)} onMouseLeave={() => numHoverOut(index)}>
+              {title}
+            </p>
+            <div className="absolute top-0 right-0 size-4 overflow-hidden">
+              <p className="text-xs font-medium translate-y-4" id={`num_${index + 1}`}>
+                {10 + index}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className="hidden md:flex items-center gap-4 text-sm fixed bottom-4 left-1/2 -translate-x-1/2 z-50 font-montserrat font-medium">
+        <p>1</p>
+        <p>&#8213;</p>
+        <p>6</p>
+      </div>
+
+      {/* <div className="hidden md:flex gap-4 items-center fixed bottom-4 right-4 z-50">
+        {imgArr?.map((num, index) => (
+          <div className={`page_img z-10 ${index == 0 ? "page_active" : ""}`} key={index}>
+            <Image width={80} height={40} src={`/images/cards/img-${num}.jpg`} alt="bg" className="size-full brightness-75 object-cover " />
+          </div>
+        ))}
+      </div> */}
+    </div>
   );
 };
 
