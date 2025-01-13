@@ -2,7 +2,6 @@
 import { useEffect, useState } from "react";
 import "./parallax.css";
 import { gsap } from "gsap";
-import Image from "next/image";
 
 const imgArr = [1, 2, 3, 4, 5, 6];
 const titles = ["Regeneration Suites", "Simplicity & Tactility", "Reimagining Loyalty", "Beyond Canvas", "Sound Expressed In Full", "Reinventing Wonder"];
@@ -13,6 +12,12 @@ const Parallax = () => {
   useEffect(() => {
     gsap.to(".titleBox", {
       y: `${-48 * (selectedIndex - 1)}px`,
+      ease: "power1.inOut",
+      duration: 0.6,
+    });
+
+    gsap.to(".page_index", {
+      y: `${-20 * (selectedIndex - 1)}px`,
       ease: "power1.inOut",
       duration: 0.6,
     });
@@ -115,18 +120,16 @@ const Parallax = () => {
       </div>
 
       <div className="hidden md:flex items-center gap-4 text-sm fixed bottom-4 left-1/2 -translate-x-1/2 z-50 font-montserrat font-medium">
-        <p>1</p>
+        <div className="relative h-[20px] w-[20px] overflow-hidden carousel_active">
+          {imgArr?.map((item, index) => (
+            <p className="size-full flex items-center justify-center page_index" key={index}>
+              {item}
+            </p>
+          ))}
+        </div>
         <p>&#8213;</p>
-        <p>6</p>
+        <p>{imgArr?.length}</p>
       </div>
-
-      {/* <div className="hidden md:flex gap-4 items-center fixed bottom-4 right-4 z-50">
-        {imgArr?.map((num, index) => (
-          <div className={`page_img z-10 ${index == 0 ? "page_active" : ""}`} key={index}>
-            <Image width={80} height={40} src={`/images/cards/img-${num}.jpg`} alt="bg" className="size-full brightness-75 object-cover " />
-          </div>
-        ))}
-      </div> */}
     </div>
   );
 };

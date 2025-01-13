@@ -1,4 +1,5 @@
 import DesktopVision from "@/components/home/DesktopVision";
+import MobileVision from "@/components/home/MobileVision";
 
 export default function Home() {
   return (
@@ -6,6 +7,9 @@ export default function Home() {
       <div className="max-w-[1880px] h-screen mx-auto">
         <div className="hidden md:block size-full">
           <DesktopVision />
+        </div>
+        <div className="block md:hidden size-full">
+          <MobileVision />
         </div>
       </div>
     </div>

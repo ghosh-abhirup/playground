@@ -6,20 +6,19 @@ import SmoothScroller from "../SmoothScroller";
 
 const gallery = [
   {
-    bg: "/images/trees.jpg",
+    bg: "/images/cards/img-1.jpg",
     vignette: "/images/vertical/city.jpg",
+    text: "Split Vignette",
   },
   {
-    bg: "/images/water.jpg",
+    bg: "/images/cards/img-2.jpg",
     vignette: "/images/vertical/hillCity.jpg",
+    text: "lorem ipsum",
   },
   {
-    bg: "/images/blossoms.jpg",
+    bg: "/images/cards/img-3.jpg",
     vignette: "/images/vertical/christmas.jpg",
-  },
-  {
-    bg: "/images/forest.jpg",
-    vignette: "/images/vertical/room.jpg",
+    text: "space sci-fi",
   },
 ];
 
@@ -48,7 +47,7 @@ const SplitVignette = () => {
     <SmoothScroller>
       <section className="w-full h-[100dvh] relative " onMouseMove={mouseEvent}>
         {gallery?.map((item, index) => (
-          <Gallery bg={item.bg} mousePosition={mousePos} key={index} vignette={item.vignette} />
+          <Gallery bg={item.bg} mousePosition={mousePos} key={index} vignette={item.vignette} text={item.text} />
         ))}
       </section>
     </SmoothScroller>

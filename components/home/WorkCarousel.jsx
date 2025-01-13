@@ -4,6 +4,7 @@ import { Fragment, useEffect, useState } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { gsap } from "gsap";
 import { routes } from "@/app/utility";
+import Link from "next/link";
 
 const WorkCarousel = () => {
   const [selectedIndex, setSelectedIndex] = useState(1);
@@ -34,13 +35,13 @@ const WorkCarousel = () => {
   return (
     <div className="size-full relative overflow-hidden">
       {routes?.map((route, index) => (
-        <div className={`carousel_item ${index == 0 ? "carousel_active" : ""}`} id={`carousel_item_${index + 1}`} key={index}>
-          <img src={`/images/cards/img-${index + 1}.jpg`} alt="bg" className={`absolute brightness-75 size-full object-cover `} />
+        <Link href={route?.link} className={`carousel_item ${index == 0 ? "carousel_active" : ""}`} id={`carousel_item_${index + 1}`} key={index}>
+          <img src={route?.img} alt="bg" className={`absolute brightness-75 size-full object-cover `} />
           <div className="w-1/2 absolute bottom-0 left-0 text-pastel_black bg-off_white p-4">
             <p className="title font-moderniz">{route.name}</p>
             <p className="font-montserrat font-medium text-xs">{route.desc}</p>
           </div>
-        </div>
+        </Link>
       ))}
 
       <div className="absolute bottom-0 right-0 flex  items-center">
