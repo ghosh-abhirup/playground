@@ -28,12 +28,12 @@ export const routes = [
     img: "/images/routes/accordion.png",
     desc: "Impressive animation inspired from Accordion AU website (from awward list), with timeline animations and shape movements ",
   },
-  {
-    name: "Zentry",
-    link: "/",
-    type: "clone",
-    desc: "Zentry is a modern web3 gaming website which made the roll last year in animation industry due to their awesome animations",
-  },
+  // {
+  //   name: "Zentry",
+  //   link: "/",
+  //   type: "clone",
+  //   desc: "Zentry is a modern web3 gaming website which made the roll last year in animation industry due to their awesome animations",
+  // },
   {
     name: "Wall Scroll",
     link: "/wall-scroll",

@@ -7,10 +7,11 @@
 }
 
 .secondary_text {
-  @apply text-xs text-gray-500 uppercase font-semibold font-montserrat;
+  @apply text-xs text-gray-500 uppercase font-semibold;
 }
+
 .count_text {
-  @apply text-xs text-white uppercase font-semibold font-montserrat;
+  @apply text-xs text-white uppercase font-semibold;
 }
 
 .marquee {
@@ -25,10 +26,12 @@
 .revealer {
   @apply relative w-16 h-16 z-50 will-change-auto;
 }
+
 .revealer .revealer-1 {
   @apply absolute top-0 left-0 size-full bg-white;
   clip-path: polygon(40% 0, 60% 0, 60% 100%, 40% 100%);
 }
+
 .revealer .revealer-2 {
   @apply absolute top-0 left-0 size-full bg-white rotate-90;
   clip-path: polygon(40% 0, 60% 0, 60% 100%, 40% 100%);
@@ -39,6 +42,6 @@
 }
 
 .long-text {
-  @apply font-semibold text-[18rem] leading-[0.8] tracking-tight font-montserrat uppercase;
+  @apply font-semibold text-[18rem] leading-[0.8] tracking-tight uppercase;
   will-change: top;
 }

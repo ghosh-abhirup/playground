@@ -88,7 +88,7 @@ const Parallax = () => {
   };
 
   return (
-    <div className="w-full h-screen overflow-hidden relative font-montserrat">
+    <div className="w-full h-screen overflow-hidden relative">
       {imgArr?.map((num, index) => (
         <div className={`item z-10 ${index == 0 ? "carousel_active" : ""}`} id={`item_${index + 1}`} key={index}>
           <img src={`/images/cards/img-${num}.jpg`} alt="bg" className="size-full brightness-50 object-cover " />
@@ -119,7 +119,7 @@ const Parallax = () => {
         ))}
       </div>
 
-      <div className="hidden md:flex items-center gap-4 text-sm fixed bottom-4 left-1/2 -translate-x-1/2 z-50 font-montserrat font-medium">
+      <div className="hidden md:flex items-center gap-4 text-sm fixed bottom-4 left-1/2 -translate-x-1/2 z-50 font-medium">
         <div className="relative h-[20px] w-[20px] overflow-hidden carousel_active">
           {imgArr?.map((item, index) => (
             <p className="size-full flex items-center justify-center page_index" key={index}>

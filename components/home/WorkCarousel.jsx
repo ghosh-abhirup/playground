@@ -39,7 +39,7 @@ const WorkCarousel = () => {
           <img src={route?.img} alt="bg" className={`absolute brightness-75 size-full object-cover `} />
           <div className="w-1/2 absolute bottom-0 left-0 text-pastel_black bg-off_white p-4">
             <p className="title font-moderniz">{route.name}</p>
-            <p className="font-montserrat font-medium text-xs">{route.desc}</p>
+            <p className=" font-medium text-xs">{route.desc}</p>
           </div>
         </Link>
       ))}

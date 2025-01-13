@@ -39,7 +39,7 @@ const gallery = [
 const ImageGallery = () => {
   return (
     <div className="w-full p-4">
-      <div className="w-full flex items-center justify-between text-black font-bold text-[6rem] tracking-tighter font-montserrat">
+      <div className="w-full flex items-center justify-between text-black font-bold text-[6rem] tracking-tighter">
         <p>01</p>
         <p>/</p>
         <p>07</p>

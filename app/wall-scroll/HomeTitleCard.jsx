@@ -13,7 +13,7 @@ const HomeTitleCard = () => {
             Van Holt Co
           </Link>
         </p>
-        <div className="mt-4 font-montserrat flex flex-col md:flex-row items-start gap-6 text-sm">
+        <div className="mt-4 flex flex-col md:flex-row items-start gap-6 text-sm">
           <div className="w-full md:max-w-[20vw]">
             <p>Fun side projects showcasing my love in making unique designs come to life </p>
           </div>

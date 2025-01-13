@@ -16,7 +16,7 @@
 }
 
 .descBox {
-  @apply fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-xs md:text-2xl font-light font-montserrat z-50 w-[50vw]  md:w-[30vw] h-12;
+  @apply fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-xs md:text-2xl font-light z-50 w-[50vw] md:w-[30vw] h-12;
 
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }

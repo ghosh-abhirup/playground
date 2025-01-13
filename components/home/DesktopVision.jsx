@@ -35,7 +35,7 @@ const DesktopVision = () => {
         </div>
 
         <div className="w-[45%] h-full flex items-center justify-center">
-          <p className="font-montserrat font-medium text-left text-sm px-6"></p>
+          <p className=" font-medium text-left text-sm px-6"></p>
         </div>
       </div>
     </div>

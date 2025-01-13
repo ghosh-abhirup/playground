@@ -24,7 +24,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${greenos.variable} ${moderniz.variable} ${montserrat.variable} ${anton.variable} antialiased`}>{children}</body>
+      <body className={`${greenos.variable} ${moderniz.variable} ${montserrat.variable} ${anton.variable} font-montserrat antialiased`}>{children}</body>
     </html>
   );
 }

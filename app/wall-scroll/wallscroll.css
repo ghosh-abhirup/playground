@@ -28,5 +28,5 @@
 }
 
 .social_links {
-  @apply rotate-90 uppercase font-montserrat font-semibold leading-[0.6];
+  @apply rotate-90 uppercase font-semibold leading-[0.6];
 }
