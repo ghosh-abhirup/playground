@@ -10,7 +10,7 @@
   @apply border-solid border-off_white border-r-4;
 }
 
-.social_links {
+.social_links_home {
   @apply w-1/3 h-full text-center off_white_border_right flex items-center gap-2 justify-center text-2xl cursor-pointer hover:bg-off_white hover:text-pastel_black transition-all;
 }
 

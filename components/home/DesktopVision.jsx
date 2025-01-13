@@ -20,15 +20,15 @@ const DesktopVision = () => {
       </div>
       <div className="flex items-center">
         <div className="flex-1 flex items-center h-[15vh]">
-          <Link target="_blank" href={"/"} className="social_links">
+          <Link target="_blank" href={"/"} className="social_links_home">
             <p className="social_link">portfolio</p>
             <TbExternalLink />
           </Link>
-          <Link target="_blank" href={GITHUB_URL} className="social_links">
+          <Link target="_blank" href={GITHUB_URL} className="social_links_home">
             <p className="social_link">github</p>
             <TbExternalLink />
           </Link>
-          <Link target="_blank" href={LINKEDIN_URL} className="social_links">
+          <Link target="_blank" href={LINKEDIN_URL} className="social_links_home">
             <p className="social_link">linkedin</p>
             <TbExternalLink />
           </Link>

@@ -185,7 +185,7 @@ const Accordion = () => {
           <section className="bg-black information pt-[40vh]">
             <div className="flex items-start justify-between ">
               <p className="count_text">{`(INTROUCTION)`}</p>
-              <p className="text-2xl w-1/2">We're a tight-knit collective of artists and creative minds dedicated to crafting unique film and photographic works that entertain and engage.</p>
+              <p className="text-2xl w-1/2">We&apos;re a tight-knit collective of artists and creative minds dedicated to crafting unique film and photographic works that entertain and engage.</p>
             </div>
 
             <div className="pt-[7rem] w-full overflow-hidden marqueeParent">

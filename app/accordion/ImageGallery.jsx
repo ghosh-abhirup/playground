@@ -47,7 +47,7 @@ const ImageGallery = () => {
 
       <div className="mt-2 flex items-center justify-center gap-4">
         {gallery?.map((item, i) => (
-          <div className="h-[80vh] w-[5rem]">
+          <div className="h-[80vh] w-[5rem]" key={i}>
             <img src={item.bg} alt="img" className="size-full object-cover object-center brightness-75" />
           </div>
         ))}
