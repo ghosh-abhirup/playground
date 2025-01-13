@@ -34,8 +34,9 @@ const DesktopVision = () => {
           </Link>
         </div>
 
-        <div className="w-[45%] h-full flex items-center justify-center">
-          <p className=" font-medium text-left text-sm px-6"></p>
+        <div className="w-[45%] h-full flex flex-wrap px-6 items-center justify-center">
+          <p className=" font-medium text-2xl lg:text-3xl  font-ephesis">Everything you can imagine is real</p>
+          <p className="text-xs font-moderniz mt-2 ml-2">- Pablo Picasso</p>
         </div>
       </div>
     </div>

@@ -8,6 +8,7 @@ module.exports = {
         anton: ["var(--font-anton)", "sans-serif"],
         montserrat: ["var(--font-montserrat)", "sans-serif"],
         moderniz: ["var(--font-moderniz)", "sans-serif"],
+        ephesis: ["var(--font-ephesis)", "sans-serif"],
       },
       colors: {
         secondary_text: "#c0c0c0",

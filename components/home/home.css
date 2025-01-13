@@ -15,7 +15,7 @@
 }
 
 .social_link {
-  @apply font-moderniz uppercase text-lg tracking-wider leading-[1] mt-2;
+  @apply font-moderniz uppercase text-sm lg:text-lg tracking-wider leading-[1] mt-2;
 }
 
 .link {

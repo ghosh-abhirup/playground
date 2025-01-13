@@ -1,6 +1,6 @@
 import localFont from "next/font/local";
 import "./globals.css";
-import { Montserrat, Anton } from "next/font/google";
+import { Montserrat, Anton, Ephesis } from "next/font/google";
 
 const greenos = localFont({
   src: "./fonts/Greenos.ttf",
@@ -15,6 +15,7 @@ const moderniz = localFont({
 
 const montserrat = Montserrat({ subsets: ["latin"], weight: ["200", "300", "400", "500", "700", "600", "800"], variable: "--font-montserrat" });
 const anton = Anton({ subsets: ["latin"], weight: ["400"], variable: "--font-anton" });
+const ephesis = Ephesis({ subsets: ["latin"], weight: ["400"], variable: "--font-ephesis" });
 
 export const metadata = {
   title: "Create Next App",
@@ -24,7 +25,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${greenos.variable} ${moderniz.variable} ${montserrat.variable} ${anton.variable} font-montserrat antialiased`}>{children}</body>
+      <body className={`${ephesis.variable} ${greenos.variable} ${moderniz.variable} ${montserrat.variable} ${anton.variable} font-montserrat antialiased`}>{children}</body>
     </html>
   );
 }
