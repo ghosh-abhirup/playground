@@ -2,7 +2,7 @@ import "./home.css";
 import { TbExternalLink } from "react-icons/tb";
 import WorkCarousel from "./WorkCarousel";
 import Link from "next/link";
-import { GITHUB_URL, LINKEDIN_URL } from "@/app/utility";
+import { GITHUB_URL, LINKEDIN_URL, PORTFOLIO_URL } from "@/app/utility";
 
 const DesktopVision = () => {
   return (
@@ -20,7 +20,7 @@ const DesktopVision = () => {
       </div>
       <div className="flex items-center">
         <div className="flex-1 flex items-center h-[15vh]">
-          <Link target="_blank" href={"/"} className="social_links_home">
+          <Link target="_blank" href={PORTFOLIO_URL} className="social_links_home">
             <p className="social_link">portfolio</p>
             <TbExternalLink />
           </Link>

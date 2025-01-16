@@ -1,4 +1,4 @@
-import { GITHUB_URL, LINKEDIN_URL, routes } from "@/app/utility";
+import { GITHUB_URL, LINKEDIN_URL, PORTFOLIO_URL, routes } from "@/app/utility";
 import Link from "next/link";
 import { MdOutlineDoubleArrow } from "react-icons/md";
 
@@ -17,7 +17,7 @@ const MobileVision = () => {
           <p className="uppercase font-moderniz text-sm leading-[1]">LinkedIn</p>
           <MdOutlineDoubleArrow />
         </Link>
-        <Link href={"/"} className="flex bg-off_white px-2 py-3 text-pastel_black items-center justify-between">
+        <Link href={PORTFOLIO_URL} className="flex bg-off_white px-2 py-3 text-pastel_black items-center justify-between">
           <p className="uppercase font-moderniz text-sm leading-[1]">Portfolio</p>
           <MdOutlineDoubleArrow />
         </Link>

@@ -1,4 +1,5 @@
 export const GITHUB_URL = "https://github.com/ghosh-abhirup";
+export const PORTFOLIO_URL = "https://portfolio.avidev.in/";
 
 export const LINKEDIN_URL = "https://www.linkedin.com/in/abhirupg/";
 
@@ -9,12 +10,12 @@ export const routes = [
     img: "/images/routes/parallax.png",
     desc: "Smooth and beautifull parallax animation inspired from awward SOTD website, using GSAP animations and Next JS",
   },
-  {
-    name: "Split Vignette",
-    link: "/split-vignette",
-    img: "/images/routes/split-vignette.png",
-    desc: "Split vignette animation from awwards websites, to show the split change in a element using CSS and Next JS",
-  },
+  // {
+  //   name: "Split Vignette",
+  //   link: "/split-vignette",
+  //   img: "/images/routes/split-vignette.png",
+  //   desc: "Split vignette animation from awwards websites, to show the split change in a element using CSS and Next JS",
+  // },
   {
     name: "Dribble Anim",
     link: "/dribbleEffect",
