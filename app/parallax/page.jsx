@@ -7,18 +7,6 @@ import { useGSAP } from "@gsap/react";
 const imgArr = [1, 2, 3, 4, 5, 6];
 const titles = ["Regeneration Suites", "Simplicity & Tactility", "Reimagining Loyalty", "Beyond Canvas", "Sound Expressed In Full", "Reinventing Wonder"];
 
-const MemoizedItem = memo(({ num, index }) => (
-  <div className={`item z-10 will-change-transform ${index === 0 ? "carousel_active" : ""}`} id={`item_${index + 1}`} key={index}>
-    <img src={`/images/cards/img-${num}.jpg`} alt="bg" className="size-full brightness-50 object-cover " />
-  </div>
-));
-
-const MemoizedPageIndex = memo(({ item, index }) => (
-  <p className="size-full flex items-center justify-center page_index will-change-transform" key={index}>
-    {item}
-  </p>
-));
-
 const Parallax = () => {
   const [selectedIndex, setSelectedIndex] = useState(1);
 
@@ -103,7 +91,9 @@ const Parallax = () => {
   return (
     <div className="w-full h-screen overflow-hidden relative">
       {imgArr?.map((num, index) => (
-        <MemoizedItem num={num} index={index} key={index} />
+        <div className={`item z-10 will-change-transform ${index === 0 ? "carousel_active" : ""}`} id={`item_${index + 1}`} key={index}>
+          <img src={`/images/cards/img-${num}.jpg`} alt="bg" className="size-full brightness-50 object-cover " />
+        </div>
       ))}
 
       <div className="size-full absolute flex items-center z-20 text-white gap-10 md:gap-[20vw]">
@@ -137,7 +127,9 @@ const Parallax = () => {
       <div className="hidden md:flex items-center gap-4 text-sm fixed bottom-4 left-1/2 -translate-x-1/2 z-50 font-medium">
         <div className="relative h-[20px] w-[20px] overflow-hidden carousel_active">
           {imgArr?.map((item, index) => (
-            <MemoizedPageIndex item={item} index={index} key={index} />
+            <p className="size-full flex items-center justify-center page_index will-change-transform" key={index}>
+              {item}
+            </p>
           ))}
         </div>
         <p>&#8213;</p>
