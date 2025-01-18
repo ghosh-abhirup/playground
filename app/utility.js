@@ -35,7 +35,7 @@ export const routes = [
     target: "redirect",
     type: "clone",
     img: "/images/routes/zentry.png",
-    desc: "Zentry is a modern web3 gaming website which made the roll last year in animation industry due to their awesome animations. This is a clone of their home page.",
+    desc: "Zentry is a modern web3 gaming website which made the roll last year in animation industry due to their awesome animations.",
   },
   {
     name: "Wall Scroll",

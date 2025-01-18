@@ -35,7 +35,7 @@ const WorkCarousel = () => {
   return (
     <div className="size-full relative overflow-hidden">
       {routes?.map((route, index) => (
-        <Link href={route.link} target={route?.target == "redirect" ? "_blank" : "_self"} className={`carousel_item ${index == 0 ? "carousel_active" : ""}`} id={`carousel_item_${index + 1}`} key={index}>
+        <Link href={route.link} target={route?.target == "redirect" ? "_blank" : "_self"} prefetch={false} className={`carousel_item ${index == 0 ? "carousel_active" : ""}`} id={`carousel_item_${index + 1}`} key={index}>
           <img src={route?.img} alt="bg" className={`absolute brightness-75 size-full object-cover `} />
           <div className="w-1/2 absolute bottom-0 left-0 text-pastel_black bg-off_white p-4">
             <p className="title font-moderniz">{route.name}</p>
