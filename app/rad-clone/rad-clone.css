@@ -1,0 +1,75 @@
+.images {
+    @apply relative object-cover size-full will-change-transform;
+}
+
+
+.rad-container {
+    @apply relative w-screen overflow-x-hidden
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.content {
+    @apply relative w-full h-screen overflow-hidden p-8
+}
+
+.slides {
+    @apply relative h-full w-[300%] flex flex-nowrap will-change-transform translate-x-0 translate-y-0
+}
+
+.slide {
+    @apply relative flex-1 h-full overflow-hidden
+}
+
+.imgParent {
+    @apply absolute size-full overflow-hidden
+}
+
+.title {
+    @apply relative w-max h-[200px] m-4 z-10;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.title h1 {
+    @apply relative uppercase font-bold font-moderniz text-[3rem] will-change-transform leading-[1.2] -translate-y-[200px]
+}
+
+.markers {
+    @apply p-2 rounded-full border-[1px] border-black text-[8px] size-4 flex items-center justify-center;
+}
+
+.mid_marker_top {
+    @apply fixed top-6 z-50 bg-black left-1/2 -translate-x-1/2 w-[1px] h-2
+}
+
+.mid_marker_bottom {
+    @apply fixed bottom-6 z-50 bg-black left-1/2 -translate-x-1/2 w-[1px] h-2
+}
+
+.mid_marker_left {
+    @apply fixed left-6 z-50 bg-black top-1/2 -translate-y-1/2 w-2 h-[1px]
+}
+
+.mid_marker_right {
+    @apply fixed right-6 z-50 bg-black top-1/2 -translate-y-1/2 w-2 h-[1px]
+}
+
+
+/* nav */
+.nav_modal {
+    @apply fixed text-off_white bg-pastel_black left-1/4 top-[60%] rounded-md w-1/2 z-50 py-2 px-4 will-change-transform origin-center
+}
+
+.nav_modal_body {
+    @apply absolute z-[80] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 pointer-events-none flex items-center gap-[10vw]
+}
+
+.nav_modal_footer {
+    @apply absolute w-full bottom-6 opacity-0 pointer-events-none
+}
+
+.nav_links {
+    @apply uppercase font-bold text-[2rem] tracking-wide cursor-pointer
+}

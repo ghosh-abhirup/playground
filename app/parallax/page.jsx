@@ -1,9 +1,7 @@
 "use client";
-import { memo, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./parallax.css";
 import { gsap } from "gsap";
-import { useGSAP } from "@gsap/react";
-
 const imgArr = [1, 2, 3, 4, 5, 6];
 const titles = ["Regeneration Suites", "Simplicity & Tactility", "Reimagining Loyalty", "Beyond Canvas", "Sound Expressed In Full", "Reinventing Wonder"];
 
