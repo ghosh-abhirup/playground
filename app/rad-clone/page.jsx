@@ -1,5 +1,6 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+
+import React, { useEffect, useState } from "react";
 import "./rad-clone.css";
 import SmoothScroller from "../SmoothScroller";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
