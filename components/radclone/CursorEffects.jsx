@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import gsap from "../gsapController";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import gsap from "@/app/gsapController";
 
 const CursorEffects = ({ mousePos }) => {
   const [screenParameters, setScreenParameters] = useState({ width: 0, height: 0 });
@@ -84,41 +84,38 @@ const CursorEffects = ({ mousePos }) => {
       ease: "none",
       duration: 0.3,
     });
-    gsap.to(".nav_modal_footer", {
-      opacity: isModalOpen ? 1 : 0,
-      ease: "none",
-      duration: 0.3,
-    });
   }, [isModalOpen]);
 
   return (
     <div className="text-black text-xs font-medium">
-      <p className="xPos fixed top-2 -translate-x-1/2 z-50 ">{movingCursorVal.x}</p>
-      <p className="yPos fixed right-2 -translate-y-1/2 z-50 " style={{ writingMode: "vertical-lr" }}>
-        {movingCursorVal.y}
-      </p>
-      <p className="fixed bottom-2 z-50 left-1/2 -translate-x-1/2">{screenParameters.width / 2}</p>
-      <p className="fixed left-2 z-50 top-1/2 -translate-y-1/2" style={{ writingMode: "sideways-lr" }}>
-        {screenParameters.height / 2}
-      </p>
+      <div>
+        <p className="xPos fixed top-2 -translate-x-1/2 z-50 ">{movingCursorVal.x}</p>
+        <p className="yPos fixed right-2 -translate-y-1/2 z-50 " style={{ writingMode: "vertical-lr" }}>
+          {movingCursorVal.y}
+        </p>
+        <p className="fixed bottom-2 z-50 left-1/2 -translate-x-1/2">{screenParameters.width / 2}</p>
+        <p className="fixed left-2 z-50 top-1/2 -translate-y-1/2" style={{ writingMode: "sideways-lr" }}>
+          {screenParameters.height / 2}
+        </p>
 
-      <div className="mid_marker_bottom"></div>
-      <div className="mid_marker_left"></div>
-      <div className="mid_marker_right"></div>
-      <div className="mid_marker_top"></div>
+        <div className="mid_marker_bottom"></div>
+        <div className="mid_marker_left"></div>
+        <div className="mid_marker_right"></div>
+        <div className="mid_marker_top"></div>
 
-      <div className="fixed bottom-2 z-50 right-8 flex items-center gap-2">
-        <p>{mousePos.x}</p>
-        <p className="markers">X</p>
-        <p>{screenParameters.width}</p>
-        <p className="markers">W</p>
-      </div>
+        <div className="fixed bottom-2 z-50 right-8 flex items-center gap-2">
+          <p>{mousePos.x}</p>
+          <p className="markers">X</p>
+          <p>{screenParameters.width}</p>
+          <p className="markers">W</p>
+        </div>
 
-      <div className="fixed left-2 z-50 top-8 flex items-center gap-2" style={{ writingMode: "sideways-lr" }}>
-        <p>{mousePos.y}</p>
-        <p className="markers">Y</p>
-        <p>{screenParameters.height}</p>
-        <p className="markers">H</p>
+        <div className="fixed left-2 z-50 top-8 flex items-center gap-2" style={{ writingMode: "sideways-lr" }}>
+          <p>{mousePos.y}</p>
+          <p className="markers">Y</p>
+          <p>{screenParameters.height}</p>
+          <p className="markers">H</p>
+        </div>
       </div>
 
       {/* nav */}
@@ -144,8 +141,6 @@ const CursorEffects = ({ mousePos }) => {
             <p className="nav_links">contact</p>
           </div>
         </div>
-
-        <div className="nav_modal_footer">lorem ipsum</div>
       </div>
     </div>
   );
