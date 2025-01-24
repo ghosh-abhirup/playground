@@ -27,12 +27,12 @@
     @apply absolute size-full overflow-hidden
 }
 
-.title {
+.rad-title {
     @apply relative w-max h-[200px] m-4 z-10;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
-.title h1 {
+.rad-title h1 {
     @apply relative uppercase font-bold font-moderniz text-[3rem] will-change-transform leading-[1.2] -translate-y-[200px]
 }
 

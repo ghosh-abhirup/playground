@@ -36,7 +36,7 @@ const ContentScroll = () => {
     const currentSlide = slides[currentVisibleIndex];
     if (prevVisibleIndex >= 0) {
       const prevSlide = slides[prevVisibleIndex];
-      const prevText = prevSlide.querySelector(".title h1");
+      const prevText = prevSlide.querySelector(".rad-title h1");
 
       gsap.fromTo(
         prevText,
@@ -48,7 +48,7 @@ const ContentScroll = () => {
         }
       );
     }
-    const titleText = currentSlide.querySelector(".title h1");
+    const titleText = currentSlide.querySelector(".rad-title h1");
 
     gsap.fromTo(
       titleText,
@@ -134,7 +134,7 @@ const ContentScroll = () => {
               <div className="imgParent">
                 <img src={slide.img} alt="image" className="images" />
               </div>
-              <div className="title">
+              <div className="rad-title">
                 <h1>
                   {slide.t1} <br /> {slide.t2}
                 </h1>
