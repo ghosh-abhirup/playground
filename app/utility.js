@@ -11,6 +11,12 @@ export const routes = [
     desc: "Smooth and beautifull parallax animation inspired from awward SOTD website, using GSAP animations and Next JS",
   },
   {
+    name: "Radga Clone",
+    link: "/rad-clone",
+    img: "/images/routes/rad-clone.png",
+    desc: "Intro page animation using GSAP and CSS inspired from SITE OF THE DAY (Awwards) radga.com",
+  },
+  {
     name: "Accordion AU",
     link: "/accordion",
     type: "clone",
