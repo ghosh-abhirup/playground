@@ -41,4 +41,3 @@ export const routes = [
 ];
 
 // test out images -
-const IMG_1 = "";
