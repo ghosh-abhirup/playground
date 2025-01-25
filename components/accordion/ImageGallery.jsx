@@ -47,6 +47,7 @@ const ImageGallery = () => {
   const [selectedIndex, setSelectedIndex] = useState(middleSelected);
 
   useEffect(() => {
+    galleryCardActivity(selectedIndex);
     gsap.to(".num-counter", {
       top: `${-1 * selectedIndex * 144}px`,
       ease: "power1.inOut",
@@ -58,9 +59,50 @@ const ImageGallery = () => {
     });
   }, [selectedIndex]);
 
+  const galleryCardActivity = (index) => {
+    const allCards = gsap.utils.toArray(".gallery-img-card");
+
+    allCards.forEach((card, i) => {
+      const topic = card.querySelector(".gallery-topic");
+      if (i != index && topic) {
+        gsap.fromTo(
+          topic,
+          { opacity: 1, scale: 1 },
+          {
+            scale: 1.4,
+            opacity: 0,
+            duration: 0.2,
+            ease: "power3.out",
+          }
+        );
+      }
+
+      gsap.to(card, {
+        width: i == index ? `calc(100vw - 19rem)` : "4rem",
+        duration: 0.2,
+
+        onComplete: () => {
+          if (i == index && topic) {
+            gsap.fromTo(
+              topic,
+              { opacity: 0, scale: 1.4 },
+              {
+                scale: 1,
+                opacity: 1,
+                delay: 0.4,
+                duration: 0.2,
+                ease: "power3.out",
+              }
+            );
+          }
+        },
+      });
+    });
+  };
+
   return (
     <div className="w-full p-4">
-      <div className="w-full flex items-center justify-between text-black font-bold text-[6rem] tracking-tighter">
+      <div className="w-full flex items-center justify-between text-black font-bold text-[6rem]">
         <div className="flex items-center">
           <span>0</span>
           <div className="w-[65px] h-[144px] relative overflow-hidden">
@@ -80,20 +122,40 @@ const ImageGallery = () => {
       <div className="overflow-hidden flex flex-col items-center">
         <div className="gallery-content">
           {gallery?.map((item, i) => (
-            <div className={`gallery-img-card ${i == selectedIndex ? "active" : ""} `} onClick={() => setSelectedIndex(i)} key={i}>
-              <img src={item.bg} alt="img" className={`w-full h-full object-cover object-center brightness-75 ${i == selectedIndex ? "grayscale-0" : "grayscale"}`} />
+            <div className={`gallery-img-card`} onClick={() => setSelectedIndex(i)} key={i}>
+              <img src={item.bg} alt="img" id={`img_${i}`} className={`gallery_img ${i == selectedIndex ? "grayscale-0" : "grayscale"} `} />
+
               {i == selectedIndex && (
-                <div className="absolute size-full top-0 left-0">
-                  <div className="size-full flex flex-col items-center justify-center">
+                <div className="gallery-topic">
+                  <div className="size-full flex flex-col items-center justify-between">
+                    <p></p>
                     <div className="w-1/2">
                       <p className="uppercase font-semibold text-center tracking-wide">{item.title}</p>
                       <p className="font-greenos text-[4rem] text-center leading-[1] mt-4">{item.topic}</p>
                     </div>
+                    <div className="w-3/4 mb-4 flex flex-col items-center">
+                      <p className="uppercase text-xs font-bold flex items-center gap-2">
+                        <span>director</span>
+                        <span className="people-details">marty moyniham</span>
+                        <span>dop</span>
+                        <span className="people-details">liam gilmour</span>
+                        <span>edit</span>
+                        <span className="people-details">marty gilchrist</span>
+                      </p>
+                      <p className="uppercase text-xs font-bold flex items-center gap-2">
+                        <span>grade</span>
+                        <span className="people-details">marty greer</span>
+                        <span>photographer</span>
+                        <span className="people-details">christopher tovo</span>
+                      </p>
+                      <p className="uppercase text-xs font-semibold">shoot days: 5 / lead talent: 15 / extras: 36 / crew: 26 / locations: 8</p>
+                    </div>
                   </div>
                 </div>
               )}
+
               {i != selectedIndex && (
-                <div className="absolute py-4  size-full bottom-0 left-0 z-10 overflow-hidden cursor-pointer">
+                <div className="absolute py-4  size-full bottom-0 left-0 overflow-hidden pointer-events-none">
                   <div className="info-column">
                     <p className="info-column-text" style={{ writingMode: "sideways-lr" }}>
                       {item.title}

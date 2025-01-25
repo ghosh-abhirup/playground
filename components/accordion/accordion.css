@@ -47,11 +47,16 @@
 }
 
 .gallery-img-card {
-  @apply h-[80vh] max-h-[100rem] w-[4rem] transition-all duration-300 ease-in-out relative text-white;
+  @apply h-[80vh] max-h-[100rem] w-[4rem] transition-all duration-[1s] ease-in-out relative text-white cursor-pointer;
 }
 
 .gallery-img-card.active {
   width: calc(100vw - 19rem) !important;
+  cursor: default
+}
+
+.gallery-topic {
+  @apply absolute size-full top-0 left-0 opacity-0 transition-all duration-[2s] will-change-transform
 }
 
 .gallery-content {
@@ -64,9 +69,22 @@
 }
 
 .info-column-text {
-  @apply uppercase font-greenos md:text-lg translate-x-[2.5rem] transition-transform duration-300 ease-in-out
+  @apply uppercase invisible font-greenos md:text-lg translate-x-[3rem] transition-all duration-300 ease-in-out
 }
 
-.info-column:hover .info-column-text {
-  @apply translate-x-0
+.gallery_img {
+  @apply w-full h-full object-cover object-center brightness-[65%] hover:grayscale-0 transition-all
+}
+
+.gallery-img-card:hover .info-column-text {
+  @apply visible translate-x-0
+}
+
+.img_show {
+  @apply grayscale-0 !important
+}
+
+/* footer details */
+.people-details {
+  @apply font-greenos text-base tracking-wide font-medium
 }
