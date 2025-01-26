@@ -1,7 +1,7 @@
 import Parallax from "@/components/parallax/Parallax";
 
-const page = () => {
+const Page = () => {
   return <Parallax />;
 };
 
-export default page;
+export default Page;
