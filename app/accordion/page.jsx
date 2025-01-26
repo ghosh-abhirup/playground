@@ -1,7 +1,7 @@
 import Accordion from "@/components/accordion/Accordion";
 
-const page = () => {
+const Page = () => {
   return <Accordion />;
 };
 
-export default page;
+export default Page;

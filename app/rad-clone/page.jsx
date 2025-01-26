@@ -6,7 +6,7 @@ import Link from "next/link";
 import CursorEffects from "@/components/radclone/CursorEffects";
 import ContentScroll from "@/components/radclone/ContentScroll";
 
-const page = () => {
+const Page = () => {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
 
   const mouseEvent = (e) => {
@@ -34,4 +34,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
