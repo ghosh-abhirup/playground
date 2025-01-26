@@ -10,17 +10,11 @@ export const routes = [
     img: "/images/routes/parallax.png",
     desc: "Smooth and beautifull parallax animation inspired from awward SOTD website, using GSAP animations and Next JS",
   },
-  // {
-  //   name: "Split Vignette",
-  //   link: "/split-vignette",
-  //   img: "/images/routes/split-vignette.png",
-  //   desc: "Split vignette animation from awwards websites, to show the split change in a element using CSS and Next JS",
-  // },
   {
-    name: "Dribble Anim",
-    link: "/dribbleEffect",
-    img: "/images/routes/dribble-anim.png",
-    desc: "Animation from dribble plugin used in third party websites, using GSAP and Next JS",
+    name: "Radga Clone",
+    link: "/rad-clone",
+    img: "/images/routes/rad-clone.png",
+    desc: "Intro page animation using GSAP and CSS inspired from SITE OF THE DAY (Awwards) radga.com",
   },
   {
     name: "Accordion AU",
@@ -45,3 +39,5 @@ export const routes = [
     desc: "Wall like scroll animation inspired from awward winning website of Van Holt Co. Using pure css and skew animation",
   },
 ];
+
+// test out images -

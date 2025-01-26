@@ -1,0 +1,90 @@
+.sect {
+  @apply w-full h-screen overflow-hidden;
+}
+
+.text_wrapper {
+  @apply flex flex-col items-start;
+}
+
+.secondary_text {
+  @apply text-xs text-gray-500 uppercase font-semibold;
+}
+
+.count_text {
+  @apply text-xs text-white uppercase font-semibold;
+}
+
+.marquee {
+  @apply flex items-center min-w-[150vw] gap-4;
+  will-change: transform;
+}
+
+.navbar_text {
+  @apply font-semibold leading-3 uppercase text-white tracking-wide text-xs;
+}
+
+.revealer {
+  @apply relative w-16 h-16 z-50 will-change-auto;
+}
+
+.revealer .revealer-1 {
+  @apply absolute top-0 left-0 size-full bg-white;
+  clip-path: polygon(40% 0, 60% 0, 60% 100%, 40% 100%);
+}
+
+.revealer .revealer-2 {
+  @apply absolute top-0 left-0 size-full bg-white rotate-90;
+  clip-path: polygon(40% 0, 60% 0, 60% 100%, 40% 100%);
+}
+
+.web-content {
+  @apply bg-white text-black w-full min-h-screen relative z-[80] opacity-0 will-change-auto;
+}
+
+.long-text {
+  @apply font-semibold text-[4rem] lg:text-[10rem] xl:text-[18rem] leading-[0.8] tracking-tight uppercase;
+  will-change: top;
+}
+
+.gallery-img-card {
+  @apply h-[80vh] max-h-[100rem] w-[4rem] transition-all duration-[1s] ease-in-out relative text-white cursor-pointer;
+}
+
+.gallery-img-card.active {
+  width: calc(100vw - 19rem) !important;
+  cursor: default
+}
+
+.gallery-topic {
+  @apply absolute size-full top-0 left-0 opacity-0 transition-all duration-[2s] will-change-transform
+}
+
+.gallery-content {
+  @apply flex items-center justify-center gap-2 mt-2;
+  width: calc(100% + 9rem);
+}
+
+.info-column {
+  @apply size-full flex flex-col items-center justify-end gap-4;
+}
+
+.info-column-text {
+  @apply uppercase invisible font-greenos md:text-lg translate-x-[3rem] transition-all duration-300 ease-in-out
+}
+
+.gallery_img {
+  @apply w-full h-full object-cover object-center brightness-[65%] hover:grayscale-0 transition-all
+}
+
+.gallery-img-card:hover .info-column-text {
+  @apply visible translate-x-0
+}
+
+.img_show {
+  @apply grayscale-0 !important
+}
+
+/* footer details */
+.people-details {
+  @apply font-greenos text-base tracking-wide font-medium
+}
