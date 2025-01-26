@@ -103,12 +103,12 @@ const ImageGallery = () => {
   return (
     <div className="w-full p-4">
       <div className="w-full flex items-center justify-between text-black font-bold text-[6rem]">
-        <div className="flex items-center">
+        <div className="flex items-center overflow-hidden">
           <span>0</span>
-          <div className="w-[65px] h-[144px] relative overflow-hidden">
+          <div className="w-[65px] h-[144px] relative ">
             <div className="num-counter absolute top-0 flex flex-col">
               {[...Array(totalImages).keys()].map((num, i) => (
-                <span className="h-[144px] w-full flex items-start justify-center" key={i}>
+                <span className="h-[144px] w-full flex items-center justify-start" key={i}>
                   {num + 1}
                 </span>
               ))}
