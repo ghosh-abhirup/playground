@@ -9,6 +9,7 @@ import gsap from "@/app/gsapController";
 import SmoothScroller from "@/app/SmoothScroller";
 import TextRotateAnimate from "../common/TextRotateAnimate";
 import TextRotateUpAnimate from "../common/TextRotateUpAnimate";
+import { CARD_IMG_2, imagesArray } from "@/app/utility";
 
 const Accordion = () => {
   const marqueeRef = useRef(null);
@@ -121,14 +122,14 @@ const Accordion = () => {
           <div className="flex flex-col items-center justify-between  size-full">
             <p></p>
             <div>
-              <p className=" text-[6rem] leading-[0.8] font-greenos">Accordion</p>
+              <p className=" text-[6rem] leading-[0.8] font-moderniz">Accordion</p>
               <div className="flex items-center justify-center mt-5">
                 <p className="navbar_text">Only for window screen</p>
               </div>
             </div>
             <p className="text-xs font-semibold mb-5 uppercase tracking-wider">A production company</p>
           </div>
-          <img src="/images/cards/img-3.jpg" alt="bg" className="brightness-50 absolute top-0 left-0 size-full object-center object-cover -z-10" />
+          <img src={CARD_IMG_2} alt="bg" className=" absolute top-0 left-0 size-full object-center object-cover -z-10" />
         </section>
         <section className="w-full overflow-hidden bg-black text-section">
           <div className="flex flex-col relative">
@@ -187,9 +188,9 @@ const Accordion = () => {
 
             <div className="pt-[7rem] w-full overflow-hidden marqueeParent">
               <div className="marquee" ref={marqueeRef}>
-                {[1, 2, 3, 4, 5, 6]?.map((item, i) => (
+                {imagesArray?.map((item, i) => (
                   <div className="w-[30vw] h-[300px]" key={i}>
-                    <img src={`/images/cards/img-${i + 1}.jpg`} alt="card_img" className="size-full object-cover object-center" />
+                    <img src={item} alt="card_img" className="size-full object-cover object-center" />
                   </div>
                 ))}
               </div>

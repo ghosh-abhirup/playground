@@ -2,40 +2,41 @@
 import { useEffect, useState } from "react";
 import "./accordion.css";
 import gsap from "@/app/gsapController";
+import { CARD_IMG_1, CARD_IMG_2, CARD_IMG_3, CARD_IMG_4, CARD_IMG_5, CARD_IMG_6, CARD_IMG_7 } from "@/app/utility";
 
 const gallery = [
   {
-    bg: "/images/cards/img-1.jpg",
+    bg: CARD_IMG_1,
     title: "Visit Victoria",
     topic: "Andy Lee's greatest golf challenge",
   },
   {
-    bg: "/images/cards/img-2.jpg",
+    bg: CARD_IMG_2,
     title: "Health partners",
     topic: "Health Insurance, Done Right",
   },
   {
-    bg: "/images/cards/img-3.jpg",
+    bg: CARD_IMG_3,
     title: "Victorian Dept. of health",
     topic: "Make a Difference",
   },
   {
-    bg: "/images/cards/img-4.jpg",
+    bg: CARD_IMG_4,
     title: "Jobs Victoria",
     topic: "Backing you",
   },
   {
-    bg: "/images/cards/img-5.jpg",
+    bg: CARD_IMG_5,
     title: "Chrisholm Institute",
     topic: "For the better",
   },
   {
-    bg: "/images/cards/img-6.jpg",
+    bg: CARD_IMG_6,
     title: "Manchester News",
     topic: "How safe is your car",
   },
   {
-    bg: "/images/cards/img-7.jpg",
+    bg: CARD_IMG_7,
     title: "Monash",
     topic: "What it takes",
   },

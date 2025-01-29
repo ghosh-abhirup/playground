@@ -15,7 +15,7 @@
 }
 
 .marquee {
-  @apply flex items-center min-w-[150vw] gap-4;
+  @apply flex items-center min-w-[150vw];
   will-change: transform;
 }
 
