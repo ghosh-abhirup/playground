@@ -4,26 +4,23 @@ import React, { useEffect, useState } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "@/app/gsapController";
 import "./rad-clone.css";
-
-const IMG_3 = "https://images.unsplash.com/photo-1519643381401-22c77e60520e?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
-const IMG_2 = "https://images.unsplash.com/photo-1489058535093-8f530d789c3b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
-const IMG_1 = "https://plus.unsplash.com/premium_photo-1668264326274-a4a47897689d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+import { CARD_IMG_5, CARD_IMG_6, CARD_IMG_7 } from "@/app/utility";
 
 const slidesData = [
   {
     t1: "City of dreams",
     t2: "Transform",
-    img: IMG_1,
+    img: CARD_IMG_7,
   },
   {
     t1: "Stadium",
     t2: "Breathes Greatness",
-    img: IMG_2,
+    img: CARD_IMG_6,
   },
   {
     t1: "Minimal Design",
     t2: "Natural Wonders",
-    img: IMG_3,
+    img: CARD_IMG_5,
   },
 ];
 
