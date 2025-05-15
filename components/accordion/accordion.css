@@ -1,5 +1,7 @@
 .sect {
-  @apply w-full h-screen overflow-hidden;
+  @apply w-full overflow-hidden;
+  height: 100vh !important;
+  max-height: 100vh !important;
 }
 
 .text_wrapper {

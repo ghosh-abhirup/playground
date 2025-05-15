@@ -75,7 +75,7 @@ const ContentScroll = () => {
       end: `+=${slidesContainer.offsetWidth}`,
       scrub: 1,
       pin: true,
-      // pinSpacing: true,
+      pinSpacing: true,
       snap: 1 / (slides.length - 1),
 
       onUpdate: ({ progress }) => {
