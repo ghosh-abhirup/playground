@@ -12,7 +12,10 @@
 }
 
 .content {
-    @apply relative w-full h-screen overflow-hidden p-8
+    @apply relative w-full overflow-hidden;
+
+    height: 100vh !important;
+    padding: 2rem !important;
 }
 
 .slides {
